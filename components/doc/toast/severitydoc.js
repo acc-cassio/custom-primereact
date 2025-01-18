@@ -8,7 +8,7 @@ export function SeverityDoc(props) {
     const toast = useRef(null);
 
     const showSuccess = () => {
-        toast.current.show({ severity: 'success', summary: 'Success', detail: 'Message Content', life: 3000 });
+        toast.current.show({ severity: 'success', summary: 'Success', detail: 'Message Content', life: 300000 });
     };
 
     const showInfo = () => {

@@ -709,7 +709,65 @@ export const BodyRow = React.memo(
             }
         );
 
-    return <tr {...rowProps}>{content}</tr>;
-});
+        return <tr {...rowProps}>{content}</tr>;
+    },
+    (prevProps, nextProps) => {
+        const keysToCompare = [
+            'hostName',
+            'allowCellSelection',
+            'allowRowSelection',
+            'cellClassName',
+            'checkIcon',
+            'collapsedRowIcon',
+            'columns',
+            'colsProps',
+            'compareSelectionBy',
+            'contextMenuSelected',
+            'dataKey',
+            'editMode',
+            'editing',
+            'editingMeta',
+            'editingRows',
+            'expanded',
+            'expandedRowIcon',
+            'frozenRow',
+            'groupRowsBy',
+            'index',
+            //   'isSelectable',
+            // 'onCellClick', 'onCellMouseDown', 'onCellMouseUp', 'onCheckboxChange', 'onEditingMetaChange',
+            // 'onRadioChange', 'onRowClick', 'onRowDoubleClick', 'onRowPointerDown', 'onRowPointerUp',
+            // 'onRowDragEnd', 'onRowDragLeave', 'onRowDragOver', 'onRowDragStart', 'onRowDrop',
+            // 'onRowEditCancel', 'onRowEditChange', 'onRowEditComplete', 'onRowEditInit', 'onRowEditSave',
+            // 'onRowMouseDown', 'onRowMouseEnter', 'onRowMouseLeave', 'onRowMouseUp', 'onRowRightClick',
+            // 'onRowToggle', 'onRowTouchEnd',
+            'responsiveLayout',
+            'rowClassName',
+            'rowData',
+            'rowEditValidator',
+            'rowEditorCancelIcon',
+            'rowEditorInitIcon',
+            'rowEditorSaveIcon',
+            'rowGroupMode',
+            'rowIndex',
+            'selectOnEdit',
+            'selected',
+            'selection',
+            'selectionMode',
+            'selectionModeInColumn',
+            'showRowReorderElement',
+            'showSelectionElement',
+            'tabIndex',
+            // 'tableProps',
+            // 'tableSelector',
+            'value',
+            // 'virtualScrollerOptions',
+            // 'ptCallbacks',
+            // 'metaData',
+            'unstyled'
+        ];
+
+        return ObjectUtils.selectiveCompare(prevProps, nextProps, keysToCompare);
+    }
+);
 
 BodyRow.displayName = 'BodyRow';

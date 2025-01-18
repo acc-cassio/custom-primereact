@@ -628,8 +628,17 @@ export default class ObjectUtils {
             const isObject = typeof aValue === 'object' && aValue !== null && typeof bValue === 'object' && bValue !== null;
 
             // If the current key is an object, they are compared in one further level only.
-            if (isObject && !this.absoluteCompare(aValue, bValue, 1)) return false;
-            if (!isObject && aValue !== bValue) return false;
+            // if (isObject && !this.absoluteCompare(aValue, bValue, 1)) return false;
+            // if (!isObject && aValue !== bValue) return false;
+            if (isObject && !this.absoluteCompare(aValue, bValue, 1)) {
+                // console.log('key causing the render: ', key)
+                return false;
+            }
+
+            if (!isObject && aValue !== bValue) {
+                // console.log('key causing the render: ', key)
+                return false;
+            }
         }
 
         return true;

@@ -46,19 +46,19 @@ export interface IconFieldContext {
      * Position of the icon
      * @defaultValue right
      */
-    iconPosition?: 'left' | 'right' | undefined;
+    iconposition?: 'left' | 'right' | undefined;
 }
 
 /**
  * Defines valid properties in IconField component. In addition to these, all properties of HTMLInputElement can be used in this component.
  * @group Properties
  */
-export interface IconFieldProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'iconPosition'> {
+export interface IconFieldProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'iconposition'> {
     /**
      * Position of the icon
      * @defaultValue right
      */
-    iconPosition?: 'left' | 'right' | undefined;
+    iconposition?: 'left' | 'right' | undefined;
     /**
      * Used to get the child elements of the component.
      * @readonly

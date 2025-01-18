@@ -15,13 +15,13 @@ export const IconField = React.memo(
             props,
             ...props.__parentMetadata,
             context: {
-                iconPosition: props.iconPosition
+                iconposition: props.iconposition
             }
         });
 
         const rootProps = mergeProps(
             {
-                className: classNames(props.className, cx('root', { iconPosition: props.iconPosition }))
+                className: classNames(props.className, cx('root', { iconposition: props.iconposition }))
             },
             IconFieldBase.getOtherProps(props),
             ptm('root')
@@ -31,7 +31,7 @@ export const IconField = React.memo(
             <div {...rootProps} ref={elementRef}>
                 {Children.map(props.children, (child, index) =>
                     cloneElement(child, {
-                        iconPosition: props.iconPosition
+                        iconposition: props.iconposition
                     })
                 )}
             </div>

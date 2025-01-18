@@ -665,7 +665,7 @@ export default function CustomersDemo() {
         <div className="card">
             <DataTable value={customers} paginator header={header} rows={10}
                     paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-                    rowsPerPageOptions={[10, 25, 50]} dataKey="id" selectionMode="checkbox" selection={selectedCustomers} 
+                    rowsPerPageOptions={[10, 25, 50]} dataKey="id" selectionMode="checkbox" selection={selectedCustomers}
                     onSelectionChange={(e) => {
                         const customers = e.value as Customer[];
                         setSelectedCustomers(customers);
@@ -721,9 +721,9 @@ export default function CustomersDemo() {
                         value={customers}
                         paginator
                         header={header}
-                        rows={10}
+                        rows={1000}
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-                        rowsPerPageOptions={[10, 25, 50]}
+                        rowsPerPageOptions={[10, 25, 50, 1000]}
                         dataKey="id"
                         selectionMode="checkbox"
                         selection={selectedCustomers}

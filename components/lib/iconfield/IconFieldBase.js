@@ -4,8 +4,8 @@ import { classNames } from '../utils/Utils';
 const classes = {
     root: ({ props }) =>
         classNames('p-icon-field', {
-            'p-icon-field-right': props.iconPosition === 'right',
-            'p-icon-field-left': props.iconPosition === 'left'
+            'p-icon-field-right': props.iconposition === 'right',
+            'p-icon-field-left': props.iconposition === 'left'
         })
 };
 
@@ -15,7 +15,7 @@ export const IconFieldBase = ComponentBase.extend({
         __parentMetadata: null,
         children: undefined,
         className: null,
-        iconPosition: 'right'
+        iconposition: 'right'
     },
 
     css: {
