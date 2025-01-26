@@ -683,8 +683,7 @@ export const RadioCheckCell = React.memo(
         return <Cell {...props} />;
     },
     (prevProps, nextProps) => {
-        const keysToCompare = ['isRowSelected', 'field', 'allowCellSelection', 'isCellSelected', 'editMode',
-          'index', 'tabIndex', 'editing', 'expanded', 'editingMeta', 'rowData'];
+        const keysToCompare = ['isRowSelected', 'field', 'allowCellSelection', 'isCellSelected', 'editMode', 'index', 'tabIndex', 'editing', 'expanded', 'editingMeta', 'rowData'];
 
         return ObjectUtils.selectiveCompare(prevProps, nextProps, keysToCompare);
     }
@@ -697,8 +696,7 @@ export const BodyCell = React.memo(
         return <Cell {...props} />;
     },
     (prevProps, nextProps) => {
-        const keysToCompare = ['field', 'allowCellSelection', 'isCellSelected',
-          'editMode', 'index', 'tabIndex', 'editing', 'expanded', 'editingMeta', 'rowData'];
+        const keysToCompare = ['field', 'allowCellSelection', 'isCellSelected', 'editMode', 'index', 'tabIndex', 'editing', 'expanded', 'editingMeta', 'rowData'];
 
         return ObjectUtils.selectiveCompare(prevProps, nextProps, keysToCompare);
     }
